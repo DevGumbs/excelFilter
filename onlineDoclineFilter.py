@@ -36,7 +36,8 @@ def filter_data():
 
     output = io.BytesIO()
     with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
-        pd.DataFrame(local).to_excel(writer, sheet_name="Local", index=False)
+        #comment out local field
+        # pd.DataFrame(local).to_excel(writer, sheet_name="Local", index=False) 
         pd.DataFrame(va).to_excel(writer, sheet_name="VA", index=False)
         pd.DataFrame(non_va).to_excel(writer, sheet_name="Non-VA", index=False)
 
